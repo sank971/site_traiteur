@@ -1,3 +1,5 @@
+import rizDjondjonPhoto from "@/assets/Riz_djondjon.png";
+
 export const dishPhotoLocations: Record<string, string> = {
   "acras-morue": "/images/plats/acras-de-morue.jpg",
   "boudin-creole": "/images/plats/boudin-creole.jpg",
@@ -13,7 +15,7 @@ export const dishPhotoLocations: Record<string, string> = {
   "court-bouillon-poisson": "/images/plats/court-bouillon-de-poisson.jpg",
   "blaff-crevettes": "/images/plats/blaff-de-crevettes.jpg",
   "riz-haricots-rouges": "/images/plats/riz-haricots-rouges.jpg",
-  "riz-djondjon": "/src/assets/riz_djondjon.jpg",
+  "riz-djondjon": rizDjondjonPhoto,
   "dombres-crevettes": "/images/plats/dombres-aux-crevettes.jpg",
   "matete-crabe": "/images/plats/matete-de-crabe.jpg",
   "chatrou-sauce": "/images/plats/chatrou-en-sauce.jpg",
