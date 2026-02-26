@@ -22,15 +22,66 @@ const packages = [
     featured: false,
   },
   {
-    name: "Formule Prestige",
-    occasion: "Mariage / Grande occasion",
+    name: "💍🌴 Menu Prestige Antillais 🌴💍",
+    occasion: "Mariage",
     price: "35",
     features: [
-      "Cocktail + entrée + plat + dessert + mignardises",
+      "Cocktail de bienvenue + amuse-bouches",
       "À partir de 30 personnes",
       "Service sur place disponible",
       "Vaisselle & décoration incluses",
       "Mise en place et débarrassage",
+    ],
+    menuSections: [
+      {
+        title: "🥂 Cocktail de bienvenue",
+        items: [
+          "Planteur maison",
+          "Ti-punch traditionnel",
+          "Punch coco",
+          "Jus goyave / maracuja / groseille pays",
+          "Mini accras de morue",
+          "Mini pâtés créoles",
+          "Verrines féroce d’avocat",
+        ],
+      },
+      {
+        title: "🥟 Entrée",
+        items: [
+          "Crabe farci gratiné",
+          "Duo boudin créole & salade fraîcheur",
+          "Souskay de morue revisité",
+        ],
+      },
+      {
+        title: "🍛 Plat principal",
+        items: [
+          "Colombo de poulet",
+          "Cabrit au colombo",
+          "Blaff de crevettes",
+          "Court-bouillon de poisson",
+          "Riz haricots rouges",
+          "Riz blanc parfumé",
+          "Gratin de banane plantain",
+          "Légumes pays",
+        ],
+      },
+      {
+        title: "🍰 Dessert",
+        items: [
+          "Pièce montée tropicale (ananas / coco / passion)",
+          "Assiette gourmande : flan coco + blanc-manger coco + tourment d’amour",
+          "Buffet sucré antillais",
+        ],
+      },
+      {
+        title: "🎶 Option animation culinaire",
+        items: [
+          "Stand découpe de jambon boucané",
+          "Atelier sorbet coco à la minute",
+          "Bar à rhum arrangé",
+        ],
+      },
     ],
     featured: true,
   },
@@ -100,6 +151,21 @@ const PackagesSection = () => {
                   </li>
                 ))}
               </ul>
+
+              {pkg.menuSections && (
+                <div className="mt-6 space-y-4 border-t border-border pt-6">
+                  {pkg.menuSections.map((section) => (
+                    <div key={section.title}>
+                      <p className="font-semibold text-sm mb-2">{section.title}</p>
+                      <ul className="space-y-1 text-xs text-muted-foreground list-disc pl-4">
+                        {section.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <a
                 href="#contact"
