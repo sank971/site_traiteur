@@ -1,4 +1,5 @@
 import { Phone, Mail, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -33,6 +34,9 @@ const Footer = () => {
             <a href="#" className="flex items-center gap-3 text-sm hover:text-primary transition-colors" style={{ color: "hsl(35, 20%, 55%)" }}>
               <Instagram className="w-4 h-4" /> @saveurscreoles
             </a>
+            <Link to="/contact" className="inline-block mt-4 text-sm text-primary hover:opacity-80 transition-opacity">
+              Demander un devis →
+            </Link>
           </div>
         </div>
         <div className="border-t border-primary/10 pt-8 text-center">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-feast.jpg";
 
 const Hero = () => {
@@ -61,10 +62,13 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollTo("contact")}
+              asChild
               className="border-primary/40 text-primary hover:bg-primary/10 text-base px-8 py-6"
             >
-              Commander
+              <Link to="/contact">Nous contacter</Link>
+            </Button>
+            <Button size="lg" variant="secondary" asChild className="text-base px-8 py-6">
+              <a href="tel:+33600000000">Appeler</a>
             </Button>
           </motion.div>
         </div>
