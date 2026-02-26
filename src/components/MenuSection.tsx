@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { useSiteContent } from "@/hooks/use-site-content";
 
 const extras = [
-  "Boudin créole",
-  "Gratin de christophine",
-  "Féroce d'avocat",
-  "Riz aux haricots rouges",
-  "Ti-punch maison",
-  "Blanc-manger coco",
-  "Sorbet coco",
-  "Gâteau patate douce",
+  "Poulet boucané mariné au citron vert",
+  "Cabri massalé mijoté",
+  "Court-bouillon de vivaneau",
+  "Dombrés aux crevettes",
+  "Matété de crabe",
+  "Calalou aux légumes pays",
+  "Frassée de lambis",
+  "Ragoût de queue de bœuf créole",
 ];
 
 const fadeUp = {

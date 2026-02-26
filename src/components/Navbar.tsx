@@ -9,7 +9,7 @@ const navItems = [
   { label: "Plats", to: "/plats" },
   { label: "Galerie", to: "/galerie" },
   { label: "Événements", to: "/evenements" },
-  { label: "Admin", to: "/admin" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
             06 00 00 00 00
           </a>
           <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-warm">
-            <Link to="/admin">Ajouter</Link>
+            <Link to="/contact">Demander un devis</Link>
           </Button>
         </div>
       </div>
