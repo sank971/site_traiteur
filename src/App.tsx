@@ -11,6 +11,8 @@ import PlatsPage from "./pages/PlatsPage";
 import GaleriePage from "./pages/GaleriePage";
 import AdminPage from "./pages/AdminPage";
 import PlatDetailPage from "./pages/PlatDetailPage";
+import EvenementsPage from "./pages/EvenementsPage";
+import EvenementDetailPage from "./pages/EvenementDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/plats" element={<PlatsPage />} />
             <Route path="/plats/:dishId" element={<PlatDetailPage />} />
             <Route path="/galerie" element={<GaleriePage />} />
+            <Route path="/evenements" element={<EvenementsPage />} />
+            <Route path="/evenements/:slug" element={<EvenementDetailPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

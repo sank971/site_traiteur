@@ -8,6 +8,7 @@ const navItems = [
   { label: "Carte", to: "/carte" },
   { label: "Plats", to: "/plats" },
   { label: "Galerie", to: "/galerie" },
+  { label: "Événements", to: "/evenements" },
   { label: "Admin", to: "/admin" },
 ];
 
