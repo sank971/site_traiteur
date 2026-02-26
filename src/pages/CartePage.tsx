@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageShell from "@/components/PageShell";
 import Seo from "@/components/Seo";
 import { useSiteContent } from "@/hooks/use-site-content";
@@ -18,15 +19,16 @@ const CartePage = () => {
         <p className="text-muted-foreground mb-10">Une sélection authentique et personnalisable pour vos événements privés et professionnels.</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dishes.map((dish) => (
-            <article key={dish.id} className="rounded-xl overflow-hidden border border-border bg-card">
+            <Link key={dish.id} to={`/plats/${dish.id}`} className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary/50 hover:shadow-warm transition-all">
               <img src={dish.image} alt={dish.name} className="w-full h-52 object-cover" />
               <div className="p-5 space-y-2">
                 <p className="text-xs uppercase tracking-wide text-primary">{dish.category}</p>
-                <h2 className="font-display text-2xl">{dish.name}</h2>
+                <h2 className="font-display text-2xl group-hover:text-primary transition-colors">{dish.name}</h2>
                 <p className="text-sm text-muted-foreground">{dish.description}</p>
+                <p className="text-sm"><span className="font-medium">Accompagnements :</span> {dish.accompaniments.join(", ")}</p>
                 <p className="font-semibold text-primary">{dish.price}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

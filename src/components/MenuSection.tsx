@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useSiteContent } from "@/hooks/use-site-content";
 
 const extras = [
@@ -27,9 +28,7 @@ const MenuSection = () => {
         <motion.div {...fadeUp} transition={{ duration: 0.5 }} className="text-center mb-16">
           <p className="text-primary font-sans font-semibold text-sm tracking-[0.2em] uppercase mb-3">Notre Carte</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Spécialités Antillaises</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Découvrez les plats de notre carte. Vous pouvez retrouver toutes les options sur la page carte et dans la galerie.
-          </p>
+          <p className="text-muted-foreground max-w-xl mx-auto">Cliquez sur un plat pour voir sa description détaillée, ses accompagnements et son score épice.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -40,17 +39,20 @@ const MenuSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-warm-lg transition-all duration-300"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img src={dish.image} alt={dish.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">{dish.category}</span>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2 gap-2">
-                  <h3 className="font-display text-xl font-bold text-foreground">{dish.name}</h3>
-                  <span className="text-primary font-semibold text-sm">{dish.price}</span>
+              <Link to={`/plats/${dish.id}`} className="block">
+                <div className="relative h-64 overflow-hidden">
+                  <img src={dish.image} alt={dish.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">{dish.category}</span>
                 </div>
-                <p className="text-muted-foreground text-sm">{dish.description}</p>
-              </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2 gap-2">
+                    <h3 className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors">{dish.name}</h3>
+                    <span className="text-primary font-semibold text-sm">{dish.price}</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-3">{dish.description}</p>
+                  <p className="text-sm"><span className="font-medium">Accompagnements :</span> {dish.accompaniments.join(", ")}</p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

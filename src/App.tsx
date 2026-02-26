@@ -10,6 +10,7 @@ import CartePage from "./pages/CartePage";
 import PlatsPage from "./pages/PlatsPage";
 import GaleriePage from "./pages/GaleriePage";
 import AdminPage from "./pages/AdminPage";
+import PlatDetailPage from "./pages/PlatDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/carte" element={<CartePage />} />
             <Route path="/plats" element={<PlatsPage />} />
+            <Route path="/plats/:dishId" element={<PlatDetailPage />} />
             <Route path="/galerie" element={<GaleriePage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="*" element={<NotFound />} />

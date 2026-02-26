@@ -13,6 +13,21 @@
   <url>
     <loc>https://saveurs-creoles.vercel.app/plats</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saveurs-creoles.vercel.app/plats/acras-morue</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saveurs-creoles.vercel.app/plats/colombo-poulet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saveurs-creoles.vercel.app/plats/poisson-grille</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
